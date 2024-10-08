@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getpriceOfBurger",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "priceOfBurger",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ChickenRepblic.sol": "BaseStore3"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ChickenRepblic.sol": {
+			"keccak256": "0x4f16893ae1da0d07ab7d1c93570a536a40390fb976b83ae13f6d07fd920c6551",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://41ff3fc56a3db9bcdc2175c527029f6d28899b232780071257466bc70aa94b3b",
+				"dweb:/ipfs/QmSSh7mVHKHNm52ANv2VoHCkxifZb1WsZGK7Gwxmz6AaGL"
+			]
+		}
+	},
+	"version": 1
+}
