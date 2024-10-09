@@ -16,7 +16,7 @@ contract TodoList{
     Todo[] public todos;
 
     constructor(){
-        owner = msg.sender;    // The owner to be the person to deploy the contract
+        owner = msg.sender;    
     }
 
     modifier onlyOwner(){
@@ -31,6 +31,7 @@ contract TodoList{
 
     // Create An Event
     event TodoCreated(string title, Status status);
+    event TodoUpdated(string title, Status status);
 
     function createTodo(string memory _title, string memory _desc) external onlyOwner validAddress returns (bool){
         Todo memory mytodo;
@@ -40,7 +41,7 @@ contract TodoList{
 
         todos.push(mytodo);
 
-        // Emmit events we've created
+    
         emit TodoCreated(_title, Status.Created);
 
         return true;
@@ -54,6 +55,16 @@ contract TodoList{
         mytodo.title = _title;
         mytodo.description = _desc;
         mytodo.status = Status.Edited;
+
+        emit TodoUpdated(_title, Status.Edited);
+
     }
+
+    function getTodo(uint8 _index) external view validAddress returns (string memory, string memory, Status){
+        require(_index < todos.length, "Index is out-of-bound");
+
+        Todo memory mytodo = todos[_index];
+        return (mytodo.title, mytodo.description, mytodo.status);
+    } 
 }
 
