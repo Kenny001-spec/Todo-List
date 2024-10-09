@@ -41,7 +41,7 @@ contract TodoList{
 
         todos.push(mytodo);
 
-    
+       
         emit TodoCreated(_title, Status.Created);
 
         return true;
@@ -66,5 +66,25 @@ contract TodoList{
         Todo memory mytodo = todos[_index];
         return (mytodo.title, mytodo.description, mytodo.status);
     } 
+
+    function getAllTodo() external view validAddress returns (Todo[] memory){
+        return todos;
+    }
+
+    function todoCompleted(uint8 _index) external onlyOwner validAddress returns (bool){
+        require(_index < todos.length, "Index is our-of-bound");
+
+        Todo storage mytodo = todos[_index];
+        mytodo.status = Status.Done;
+
+        return true;
+    }
+
+    function deleteTodo(uint8 _index) external onlyOwner validAddress{
+        require(_index < todos.length, "Index is out-of-bound");
+
+        todos[_index] = todos[todos.length - 1];
+        todos.pop();
+    }
 }
 
