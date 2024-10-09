@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.27+commit.40a35a09"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getNum",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "num_",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "vatN_",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_num",
+						"type": "uint32"
+					}
+				],
+				"name": "setNum",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "vaultNumber",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleStorage.sol": "SimpleStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0x3e4bd09196a09832e2c26d0c7cd9274601fd365e4f5b97c9fd919a761948d1c1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91484b9e875924d37e2d74ae0a01084b9d9426b85163f4462017eea92ea25aab",
+				"dweb:/ipfs/QmbXstxodVHSrR1d7g6jPpTCogr3SuhkUo3rkdddQfugNf"
+			]
+		}
+	},
+	"version": 1
+}
