@@ -11,6 +11,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum TodoList.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"name": "TodoCreated",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -75,6 +94,29 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_index",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_desc",
+						"type": "string"
+					}
+				],
+				"name": "updateTodo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -105,11 +147,11 @@
 	},
 	"sources": {
 		"contracts/Todo.sol": {
-			"keccak256": "0xb9c043b1405554e8b48fe1dd3efd663853fc43c33a3ff6db3babcf3f49399c5f",
+			"keccak256": "0xc178cf9a67ff450bfb3966cf819f8cf473d5059c66c5af9749dc47b89806873e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://787fbfdecea6cb640175743746df4337d91b53a95f4be75aec06d1c7fd68ef4a",
-				"dweb:/ipfs/QmZpAP2igAvgcB2RYFP6ihiePmQCNjAn7txNCvmMH7Zwd8"
+				"bzz-raw://6c7274a69d61219010c010c653dd5bbc5518d0c063413d5188c6729a3eea0ef4",
+				"dweb:/ipfs/QmSzb6KBgKeoAwB3ukx4WRXk3Q3NG3RbUBCdrHULsG3aU8"
 			]
 		}
 	},

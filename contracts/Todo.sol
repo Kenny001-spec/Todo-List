@@ -29,7 +29,31 @@ contract TodoList{
         _;
     }
 
-    function createTodo(string memory _title, string memory _desc) external onlyOwner returns (bool){
+    // Create An Event
+    event TodoCreated(string title, Status status);
+
+    function createTodo(string memory _title, string memory _desc) external onlyOwner validAddress returns (bool){
+        Todo memory mytodo;
+        mytodo.title = _title;
+        mytodo.description = _desc;
+        mytodo.status = Status.Created;
+
+        todos.push(mytodo);
+
+        // Emmit events we've created
+        emit TodoCreated(_title, Status.Created);
+
+        return true;
 
     }
+
+    function updateTodo(uint8 _index, string memory _title, string memory _desc) external onlyOwner validAddress{
+        require(_index < todos.length, "Index is out of bound") ;
+
+        Todo storage mytodo = todos[_index];
+        mytodo.title = _title;
+        mytodo.description = _desc;
+        mytodo.status = Status.Edited;
+    }
 }
+
